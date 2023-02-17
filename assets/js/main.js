@@ -210,3 +210,39 @@
 		}
 
 })(jQuery);
+
+/*My Functions*/
+const backButton = document.getElementById('back-button');
+const nextButton = document.getElementById('next-button');
+const panels = document.querySelectorAll('.panel');
+
+function previousPanel(e) {
+	for(i=0; i<panels.length; i++) {
+		if(!panels[i].classList.contains('inactive')) {
+			var thisPanel = panels[i].id;
+			var previousPanel = panels[i-1].id;
+			console.log(thisPanel);
+			console.log(previousPanel);
+		}
+	}
+	panels.forEach(panel => panel.classList.add('inactive'));
+	document.getElementById(thisPanel).style.display = "none";
+	document.getElementById(previousPanel).style.display = "block";
+	document.getElementById(previousPanel).classList.toggle('inactive');
+}
+
+function advancePanel(e) {
+	for(i=0; i<panels.length; i++) {
+		if(!panels[i].classList.contains('inactive')) {
+			var thisPanel = panels[i].id;
+			var nextPanel = panels[i+1].id;
+		}
+	}
+	panels.forEach(panel => panel.classList.add('inactive'));
+	document.getElementById(thisPanel).style.display = "none";
+	document.getElementById(nextPanel).style.display = "block";
+	document.getElementById(nextPanel).classList.toggle('inactive');
+}
+
+backButton.addEventListener('click', previousPanel)
+nextButton.addEventListener('click', advancePanel);
