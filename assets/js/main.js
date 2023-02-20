@@ -215,6 +215,7 @@
 //Forward and backwards buttons
 const backButton = document.getElementById('back-scroller');
 const nextButton = document.getElementById('forward-scroller');
+const workButton = document.getElementById('work-button');
 const panels = document.querySelectorAll('.panel');
 
 //Function describing back button
@@ -277,5 +278,21 @@ function advancePanel(e) {
 	}
 }
 
+function changeHash(e) {
+	for(i=0; i<panels.length; i++) {
+		if(!panels[i].classList.contains('inactive')) {
+			var thisPanel = panels[i].id;
+			var nextPanel = panels[i+1].id;			
+		}
+	}
+	panels.forEach(panel => panel.classList.add('inactive'));
+	document.getElementById(thisPanel).style.display = "none";
+	document.getElementById(nextPanel).style.display = "block";
+	document.getElementById(nextPanel).classList.toggle('inactive');
+	document.getElementById('home-icon').classList.remove('active');
+	document.getElementById('contents-icon').classList.add('active');
+}
+
 backButton.addEventListener('click', previousPanel);
 nextButton.addEventListener('click', advancePanel);
+workButton.addEventListener('click', changeHash)
