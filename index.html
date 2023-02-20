@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="setPanel()">
 
 		<!-- Wrapper-->
 			<div id="wrapper">
@@ -20,9 +20,9 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#back" id="back-button" class="icon solid fa-chevron-left"><span>Back</span></a>
-						<a href="#home" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#table-of-contents" class="icon solid fa-folder"><span>Contents</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+						<a href="#home" id="home-icon" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#table-of-contents" id="contents-icon" class="icon solid fa-folder"><span>Contents</span></a>
+						<a href="#contact" id="contact-icon" class="icon solid fa-envelope"><span>Contact</span></a>
 						<a href="#next" id="next-button" class="icon solid fa-chevron-right"><span>Next</span></a>
 					</nav>
 
@@ -37,10 +37,9 @@
 									<p style="margin: 1em auto;"><strong>by: Ryan Degen, MEd</strong></p>
 									<p>Intellectual Property and Front-end Web Developer at ProjectMuse.ca</p>
 								</header>
-								<a href="#foreword" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+								<div class="pic">
 									<img src="images/me.JPG" alt="" />
-								</a>
+								</div>
 							</article>
 
 						<!-- Contents-->

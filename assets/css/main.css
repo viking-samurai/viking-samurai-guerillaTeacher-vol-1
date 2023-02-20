@@ -2,7 +2,12 @@
 @import url("fontawesome-all.min.css");
 
 /*Additional CSS*/
-.margined{
+.wrapper-intro {
+	display: flex;
+	flex-direction: row;
+}
+
+.margined {
 	margin: 1em 4.4em;
 }
 
