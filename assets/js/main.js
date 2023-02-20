@@ -213,8 +213,8 @@
 
 //My Functions
 //Forward and backwards buttons
-const backButton = document.getElementById('back-button');
-const nextButton = document.getElementById('next-button');
+const backButton = document.getElementById('back-scroller');
+const nextButton = document.getElementById('forward-scroller');
 const panels = document.querySelectorAll('.panel');
 
 //Function describing back button
@@ -279,9 +279,3 @@ function advancePanel(e) {
 
 backButton.addEventListener('click', previousPanel);
 nextButton.addEventListener('click', advancePanel);
-
-
-function setHash() {
-	window.location.hash = "wrapper";
-	window.location.hash = "home";
-}

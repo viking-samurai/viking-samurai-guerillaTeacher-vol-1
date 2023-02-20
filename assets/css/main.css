@@ -2,9 +2,13 @@
 @import url("fontawesome-all.min.css");
 
 /*Additional CSS*/
-.wrapper-intro {
-	display: flex;
-	flex-direction: row;
+.side-scrollers {
+	border: none;
+	background-color: none;
+	color: #f4f4f4;
+	font-size: 2.2rem;
+	margin: 1em;
+	padding: 0;
 }
 
 .margined {
