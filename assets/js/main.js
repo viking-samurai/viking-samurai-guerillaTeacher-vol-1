@@ -281,6 +281,7 @@ backButton.addEventListener('click', previousPanel);
 nextButton.addEventListener('click', advancePanel);
 
 
-function setPanel() {
-	window.location.hash = "#home";
+function setHash() {
+	window.location.hash = "wrapper";
+	window.location.hash = "home";
 }
