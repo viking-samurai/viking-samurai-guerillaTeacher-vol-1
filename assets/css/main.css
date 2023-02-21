@@ -20,6 +20,11 @@
 	margin-left: 1em;
 }
 
+.content-paragraph {
+	margin: 1em;
+	margin-top: 0;
+}
+
 .margined {
 	margin: 1em 4.4em;
 }
