@@ -217,6 +217,7 @@ const backButton = document.getElementById('back-scroller');
 const nextButton = document.getElementById('forward-scroller');
 const workButton = document.getElementById('work-button');
 const panels = document.querySelectorAll('.panel');
+const contentListItems = document.querySelectorAll('.content-link');
 
 //Function describing back button
 function previousPanel(e) {
@@ -278,7 +279,7 @@ function advancePanel(e) {
 	}
 }
 
-function changeHash(e) {
+function landingPageHashChange(e) {
 	for(i=0; i<panels.length; i++) {
 		if(!panels[i].classList.contains('inactive')) {
 			var thisPanel = panels[i].id;
@@ -293,6 +294,41 @@ function changeHash(e) {
 	document.getElementById('contents-icon').classList.add('active');
 }
 
+function tableOperator(e) {
+	let clickedId = this.id;
+	if(clickedId === "foreword-link") {
+		panels.forEach(panel => panel.classList.add('inactive'));
+		document.getElementById('table-of-contents').style.display = "none";
+		document.getElementById('foreword').style.display = "block";
+		document.getElementById('foreword').classList.toggle('inactive');
+	}
+	if(clickedId === "work1-link") {
+		panels.forEach(panel => panel.classList.add('inactive'));
+		document.getElementById('table-of-contents').style.display = "none";
+		document.getElementById('work1').style.display = "block";
+		document.getElementById('work1').classList.toggle('inactive');
+	}
+	if(clickedId === "work2-link") {
+		panels.forEach(panel => panel.classList.add('inactive'));
+		document.getElementById('table-of-contents').style.display = "none";
+		document.getElementById('work2').style.display = "block";
+		document.getElementById('work2').classList.toggle('inactive');
+	}
+	if(clickedId === "refrain-link") {
+		panels.forEach(panel => panel.classList.add('inactive'));
+		document.getElementById('table-of-contents').style.display = "none";
+		document.getElementById('refrain').style.display = "block";
+		document.getElementById('refrain').classList.toggle('inactive');
+	}
+	if(clickedId === "conclusion-link") {
+		panels.forEach(panel => panel.classList.add('inactive'));
+		document.getElementById('table-of-contents').style.display = "none";
+		document.getElementById('conclusion').style.display = "block";
+		document.getElementById('conclusion').classList.toggle('inactive');
+	}
+}
+
 backButton.addEventListener('click', previousPanel);
 nextButton.addEventListener('click', advancePanel);
-workButton.addEventListener('click', changeHash)
+workButton.addEventListener('click', landingPageHashChange);
+contentListItems.forEach(item => item.addEventListener('click', tableOperator));

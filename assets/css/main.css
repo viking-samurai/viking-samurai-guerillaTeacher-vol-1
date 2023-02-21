@@ -10,6 +10,16 @@
 	margin: .334em;
 }
 
+.brands {
+	font-size: 1.4rem;
+}
+
+.content-links-div {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1em;
+}
+
 .margined {
 	margin: 1em 4.4em;
 }
